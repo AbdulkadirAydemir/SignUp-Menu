@@ -16,9 +16,9 @@
         <header>SignUp</header>
 
         <form action="#">
-            <div class="field">
-                <div class="input-field email-field">
-                    <input type="email" placeholder="E-mail adresinizi giriniz">
+            <div class="field email-field">
+                <div class="input-field">
+                    <input type="email" placeholder="E-mail adresinizi giriniz" class="email" />
                 </div>
                 <span class="error email-error">
                 <i class='bx bx-error-circle error-icon'></i>
@@ -28,7 +28,8 @@
 
             <div class="field create-password">
                 <div class="input-field">
-                    <input type="email" placeholder="Bir şifre oluşturun">
+                    <input type="email" placeholder="Bir şifre oluşturun" 
+                    class="password" />
                     <i class='bx bx-hide show-hide'></i>
                 </div>
                 <span class="error password-error">
@@ -39,10 +40,11 @@
 
             <div class="field confirm-password">
                 <div class="input-field">
-                    <input type="email" placeholder="Şifrenizi onaylayın.">
+                    <input type="email" placeholder="Şifrenizi onaylayın." 
+                    class="cPassword" />
                     <i class='bx bx-hide show-hide'></i>
                 </div>
-                <span class="error confirm-error">
+                <span class="error cPassword-error">
                 <i class='bx bx-error-circle error-icon'></i>
                 <p class="error-text">Şifreniz eşleşmedi. Lütfen tekrar deneyin.</p>
             </span>
@@ -53,5 +55,6 @@
         </form>
     </div>
     
+    <script src="./script.js"></script>   
 </body>
 </html>
