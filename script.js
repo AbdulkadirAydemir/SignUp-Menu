@@ -29,3 +29,22 @@ eyeIcons.forEach((eyeIcon) => {
     pInput.type = "password";
   });
 });
+
+// Şifre Doğrulama
+function createPass() {
+  const passPattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  if (!passInput.value.match(passPattern)) {
+    return passField.classList.add("invalid"); 
+}
+  passField.classList.remove("invalid"); 
+}
+
+// Şifre Doğrulaması
+function confirmPass() {
+  if (passInput.value !== cPassInput.value || cPassInput.value === "") {
+    return cPassField.classList.add("invalid");
+  }
+  cPassField.classList.remove("invalid");
+}
