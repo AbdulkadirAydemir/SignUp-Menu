@@ -48,3 +48,23 @@ function confirmPass() {
   }
   cPassField.classList.remove("invalid");
 }
+
+// Form Gönderiminde Çağırma İşlevi
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  checkEmail();
+  createPass();
+  confirmPass();
+
+  emailInput.addEventListener("keyup", checkEmail);
+  passInput.addEventListener("keyup", createPass);
+  cPassInput.addEventListener("keyup", confirmPass);
+
+  if (
+    !emailField.classList.contains("invalid") &&
+    !passField.classList.contains("invalid") &&
+    !cPassField.classList.contains("invalid")
+  ) {
+    location.href = form.getAttribute("action");
+  }
+});
